@@ -18,8 +18,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 export default class Start extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { name: '' };
-        bgColor: this.colors.blue
+        this.state = { name: '', bgColor: this.colors.blue };
     }
 
     changeBgColor = (newColor) => {
@@ -60,24 +59,44 @@ export default class Start extends React.Component {
 
                         <View style={styles.colorsArray}>
                             <TouchableOpacity
+                                accessible={true}
+                                accessibilityLabel='Background color dark'
+                                accessibilityHint='Lets you choose a color for the chat background'
+                                accessibilityRole='button'
                                 style={styles.color1}
                                 onPress={() => this.changeBgColor(this.colors.dark)}>
                             </TouchableOpacity>
                             <TouchableOpacity
+                                accessible={true}
+                                accessibilityLabel='Background color purple'
+                                accessibilityHint='Lets you choose a color for the chat background'
+                                accessibilityRole='button'
                                 style={styles.color2}
                                 onPress={() => this.changeBgColor(this.colors.purple)}>
                             </TouchableOpacity>
                             <TouchableOpacity
+                                accessible={true}
+                                accessibilityLabel='Background color blue'
+                                accessibilityHint='Lets you choose a color for the chat background'
+                                accessibilityRole='button'
                                 style={styles.color3}
                                 onPress={() => this.changeBgColor(this.colors.blue)}>
                             </TouchableOpacity>
                             <TouchableOpacity
+                                accessible={true}
+                                accessibilityLabel='Background color green'
+                                accessibilityHint='Lets you choose a color for the chat background'
+                                accessibilityRole='button'
                                 style={styles.color4}
                                 onPress={() => this.changeBgColor(this.colors.green)}>
                             </TouchableOpacity>
                         </View>
 
                         <Pressable
+                            accessible={true}
+                            accessibilityLabel='Go to Chat'
+                            accessibilityHint='Lets you navigate to the chat screen'
+                            accessibilityRole='button'
                             style={styles.button}
                             title='Got to Chat'
                             onPress={() => this.props.navigation.navigate('Chat', { 
