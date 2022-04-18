@@ -1,4 +1,6 @@
 import React from 'react';
+
+// imports React Native functionalities
 import { 
     View, 
     Text,
@@ -11,6 +13,8 @@ import {
     KeyboardAvoidingView,
     ScrollView
 } from 'react-native';
+
+// imports default background image from assets
 import BackgroundImage from '../assets/BackgroundImage.png';
 import icon from '../assets/usericon.png'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
@@ -21,10 +25,12 @@ export default class Start extends React.Component {
         this.state = { name: '', bgColor: this.colors.blue };
     }
 
+    // function to update the chat background color chosen user
     changeBgColor = (newColor) => {
         this.setState({ bgColor: newColor });
     }
 
+    // defined background colors to choose from by user
     colors = {
         dark: '#090C08',
         purple: '#474056',
@@ -34,6 +40,7 @@ export default class Start extends React.Component {
 
     render() {
         return (
+            // components to create color arrays, title, button, background image
             <View style={styles.container}>
                 <ImageBackground source={BackgroundImage} resizeMode='cover' style={styles.backgroundImage}>
 
@@ -57,6 +64,7 @@ export default class Start extends React.Component {
                             <Text style={styles.chooseColors}>Choose Background Color</Text>
                         </View>
 
+                        {/* colors to choose from for chat background */}
                         <View style={styles.colorsArray}>
                             <TouchableOpacity
                                 accessible={true}
@@ -92,6 +100,9 @@ export default class Start extends React.Component {
                             </TouchableOpacity>
                         </View>
 
+                        {/* Button to go to chat screen. 
+                        Takes the name the user typed in and passes it to the top 
+                        of the navigation bar in chat screen */}
                         <Pressable
                             accessible={true}
                             accessibilityLabel='Go to Chat'
@@ -112,6 +123,7 @@ export default class Start extends React.Component {
     }
 }
 
+// creates the app's stylesheet
 const styles = StyleSheet.create({
     container: {
         flex: 1

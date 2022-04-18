@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Imports GiftedChat 
 import { Bubble, GiftedChat } from 'react-native-gifted-chat';
 import { View, Platform, KeyboardAvoidingView } from 'react-native';
 
@@ -10,6 +12,7 @@ export default class Chat extends React.Component {
         }
     }
 
+    // creates the initial welcome message and the system message when component did mount
     componentDidMount() {
 
         let { name } = this.props.route.params;
@@ -29,7 +32,8 @@ export default class Chat extends React.Component {
                     },
                 },
 
-                // this is a system message
+                /* this is a system message that takes the name 
+                the user typed in in start screen */
                 {
                     _id: 2,
                     createAt: new Date(),
@@ -40,12 +44,14 @@ export default class Chat extends React.Component {
         });
     }
 
+    // appends the new message a user just sent to the state messages so it can be displayed in chat
     onSend(messages = []) {
         this.setState((previousState) => ({
             messages: GiftedChat.append(previousState.messages, messages),
         }));
     }
 
+    // changes the default color of the chat text bubble on the right
     renderBubble(props) {
         return (
             <Bubble
