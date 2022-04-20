@@ -25,10 +25,20 @@ export default class App extends React.Component {
             <Stack.Screen
             name='Start'
             component={Start}
+            options={{
+              headerShown: false
+            }}
             />
             <Stack.Screen
             name='Chat'
             component={Chat}
+            options={{
+              headerStyle: {
+                backgroundColor: '#06d6a0'
+              },
+              headerBackTitleVisible: false
+            }}
+            
             />
           </Stack.Navigator>
       </NavigationContainer>
