@@ -5,7 +5,12 @@ import {
     Bubble, 
     GiftedChat, 
     SystemMessage, 
-    Day } from 'react-native-gifted-chat';
+    Day,
+    InputToolbar,
+    SendButton,
+    LeftAction,
+    ChatInput
+} from 'react-native-gifted-chat';
 import { View, Platform, KeyboardAvoidingView } from 'react-native';
 
 import * as firebase from "firebase/compat";
@@ -138,7 +143,7 @@ export default class Chat extends React.Component {
                         backgroundColor: '#000'
                     },
                     left: {
-                        backgroundColor: '#white'
+                        backgroundColor: 'white'
                     }
                 }}
             />
@@ -163,7 +168,7 @@ export default class Chat extends React.Component {
                         padding: 10,
                     }}
             />
-        )
+        );
     }
 
     render() {

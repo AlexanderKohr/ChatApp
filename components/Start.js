@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 
 // imports default background image from assets
-import BackgroundImage from '../assets/BackgroundImage.png';
+import BackgroundImage from '../assets/BackgroundImage2.jpg';
 import icon from '../assets/usericon.png'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
@@ -31,10 +31,10 @@ export default class Start extends React.Component {
 
     // defined background colors to choose from by user
     colors = {
-        dark: '#090C08',
-        purple: '#474056',
-        blue: '#8A95A5',
-        green: '#B9C6AE'
+        LightGreen: '#d8e2dc',
+        LightOrange: '#ffe5d9',
+        LightPink: '#fcd5ce',
+        LightGray: '#e5e5e5'
     }
 
     render() {
@@ -71,7 +71,7 @@ export default class Start extends React.Component {
                                 accessibilityHint='Lets you choose a color for the chat background'
                                 accessibilityRole='button'
                                 style={styles.color1}
-                                onPress={() => this.changeBgColor(this.colors.dark)}>
+                                onPress={() => this.changeBgColor(this.colors.LightGreen)}>
                             </TouchableOpacity>
                             <TouchableOpacity
                                 accessible={true}
@@ -79,7 +79,7 @@ export default class Start extends React.Component {
                                 accessibilityHint='Lets you choose a color for the chat background'
                                 accessibilityRole='button'
                                 style={styles.color2}
-                                onPress={() => this.changeBgColor(this.colors.purple)}>
+                                onPress={() => this.changeBgColor(this.colors.LightOrange)}>
                             </TouchableOpacity>
                             <TouchableOpacity
                                 accessible={true}
@@ -87,7 +87,7 @@ export default class Start extends React.Component {
                                 accessibilityHint='Lets you choose a color for the chat background'
                                 accessibilityRole='button'
                                 style={styles.color3}
-                                onPress={() => this.changeBgColor(this.colors.blue)}>
+                                onPress={() => this.changeBgColor(this.colors.LightPink)}>
                             </TouchableOpacity>
                             <TouchableOpacity
                                 accessible={true}
@@ -95,7 +95,7 @@ export default class Start extends React.Component {
                                 accessibilityHint='Lets you choose a color for the chat background'
                                 accessibilityRole='button'
                                 style={styles.color4}
-                                onPress={() => this.changeBgColor(this.colors.green)}>
+                                onPress={() => this.changeBgColor(this.colors.LightGray)}>
                             </TouchableOpacity>
                         </View>
 
@@ -140,13 +140,14 @@ const styles = StyleSheet.create({
     titleBox: {
         height: '44%',
         width: '88%',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingTop: 50,
     },
 
     title: {
         fontSize: 45,
         fontWeight: "600",
-        color: '#FFF'
+        color: '#06d6a0'
     },
 
     contentBox: {
@@ -154,13 +155,14 @@ const styles = StyleSheet.create({
         height: '44%',
         width: '88%',
         justifyContent: 'space-around',
-        alignItems: 'center'
+        alignItems: 'center',
+        borderRadius: 20,
     },
 
     inputBox: {
         borderWidth: 2,
-        borderRadius: 1,
-        borderColor: 'gray',
+        borderRadius: 20,
+        borderColor: '#979dac',
         width: '88%',
         height: 60,
         paddingLeft: 20,
@@ -177,21 +179,20 @@ const styles = StyleSheet.create({
     input: {
         fontSize: 16,
         fontWeight: "300",
-        color: '#757083',
-        opacity: 0.5
+        color: '#403d39',
+        opacity: 0.8
     },
 
     colorHeader: {
-        marginRight: 'auto',
-        paddingLeft: 15,
-        width: '88%'
+        width: '88%',
+        alignItems: 'center'
     },
 
     chooseColors: {
         fontSize: 16,
         fontWeight: "300",
-        color: '#757083',
-        opacity: 1
+        color: '#979dac',
+        opacity: 1,
     },
 
     colorsArray: {
@@ -202,28 +203,28 @@ const styles = StyleSheet.create({
     },
 
     color1: {
-        backgroundColor: '#090C08',
+        backgroundColor: '#d8e2dc',
         height: 50,
         width: 50,
         borderRadius: 25
     },
 
     color2: {
-        backgroundColor: '#474056',
+        backgroundColor: '#ffe5d9',
         height: 50,
         width: 50,
         borderRadius: 25
     },
 
     color3: {
-        backgroundColor: '#8A95A5',
+        backgroundColor: '#fcd5ce',
         height: 50,
         width: 50,
         borderRadius: 25
     },
 
     color4: {
-        backgroundColor: '#B9C6AE',
+        backgroundColor: '#e5e5e5',
         height: 50,
         width: 50,
         borderRadius: 25
@@ -232,10 +233,10 @@ const styles = StyleSheet.create({
     button: {
         height: 70,
         width: '88%',
-        backgroundColor: '#757083',
+        backgroundColor: '#06d6a0',
         alignItems: 'center',
-        justifyContent: 'center'
-        
+        justifyContent: 'center',
+        borderRadius: 20
     },
 
     buttonTex: {
