@@ -10,8 +10,7 @@ import {
     Image,
     TouchableOpacity,
     Pressable,
-    KeyboardAvoidingView,
-    ScrollView
+    KeyboardAvoidingView
 } from 'react-native';
 
 // imports default background image from assets
@@ -118,6 +117,8 @@ export default class Start extends React.Component {
                         </Pressable>
                     </View>
                 </ImageBackground>
+                { Platform.OS === 'android' ? <KeyboardAvoidingView behavior="height" /> : null}
+                { Platform.OS === 'ios' ? <KeyboardAvoidingView behavior="height" /> : null}
             </View>
         )
     }
