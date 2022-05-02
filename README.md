@@ -2,11 +2,11 @@
 
 Using this app, you can do the following:
 
-Change the chat's background color;
-User can insert the name on the initial page;
-Name will be displayed on top of the chat page;
-Users will be able to share their location;
-Users will be able to share images.
+Change the chat's background color; <br>
+User can insert the name on the initial page; <br>
+Name will be displayed on top of the chat page; <br>
+Users will be able to share their location; <br>
+Users will be able to share images. <br>
 
 Built with:
 
