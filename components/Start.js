@@ -1,5 +1,4 @@
 import React from 'react';
-
 // imports React Native functionalities
 import { 
     View, 
@@ -12,16 +11,17 @@ import {
     Pressable,
     KeyboardAvoidingView
 } from 'react-native';
-
 // imports default background image from assets
 import BackgroundImage from '../assets/BackgroundImage2.jpg';
 import icon from '../assets/usericon.png'
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 export default class Start extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { name: '', bgColor: this.colors.blue };
+        this.state = { 
+            name: '', 
+            bgColor: this.colors.blue 
+        };
     }
 
     // function to update the chat background color chosen user
