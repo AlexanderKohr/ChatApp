@@ -1,6 +1,6 @@
 ## This project is about react-native.
 
-### Using this app, you can do the following:
+### Using this app, you can do the following
 
 - Change the chat's background color
 - User can insert the name on the initial page
@@ -8,7 +8,7 @@
 - User will be able to share their location
 - User will be able to share images
 
-### Built with:
+### Built with
 
 - React Native
 - Expo
