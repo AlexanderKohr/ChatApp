@@ -1,4 +1,4 @@
-This project is about react-native.
+## This project is about react-native.
 
 Using this app, you can do the following:
 
@@ -28,14 +28,14 @@ Built with:
 - As a user with a visual impairment, I want to use a chat app that is compatible with a screen
   reader so that I can engage with a chat interface.
 
-### How to use this Chat App.
+### How to use this Chat App
 
 - Node.js & npm
 - React Native
 - Expo / Expo Go
 - Firebase
 
-### Optional:
+### Optional
 
 - Android Studio (Android only)
 - Xcode (IOS only)
